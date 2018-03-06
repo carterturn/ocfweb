@@ -4,6 +4,7 @@ from ocfweb.stats.accounts import cumulative_accounts_graph
 from ocfweb.stats.accounts import cumulative_group_accounts_graph
 from ocfweb.stats.accounts import stats_accounts
 from ocfweb.stats.daily_graph import daily_graph_image
+from ocfweb.stats.inventory import hardware
 from ocfweb.stats.job_frequency import daily_jobs_image
 from ocfweb.stats.mirrors import stats_mirrors
 from ocfweb.stats.printing import pages_printed
@@ -17,6 +18,7 @@ from ocfweb.stats.summary import summary
 
 urlpatterns = [
     url(r'^$', summary, name='stats'),
+    url(r'^inventory/hardware$', hardware, name='hardware_inventory'),
     url(r'^daily-graph/graph$', daily_graph_image, name='daily_graph_image'),
     url(r'^session-count/graph$', session_count_image, name='session_count_image'),
     url(r'^session-length/graph$', session_length_image, name='session_length_image'),

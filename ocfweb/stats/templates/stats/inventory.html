@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load common %}
+{% load mathfilters %}
+{% load stats %}
+{% load ui_components %}
+
+{% block content %}
+    <div class="ocf-content-block">
+        <ul>
+            {% for device in devices %}
+            <li>A {{device.vendor}} {{device.type}}, specifically a {{device.name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
